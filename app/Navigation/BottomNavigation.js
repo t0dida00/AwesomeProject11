@@ -3,7 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'; // Import your icon library
 
 import Login from '../Screens/Login';
-import Home from '../Screens/Home/Home';
+import Home from '../Screens/Home';
+import BlankScreen from '../Screens/BlankComponent';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +22,7 @@ const BottomTabNavigator = () => {
     >
       <Tab.Screen
         name="Profile"
-        component={Home}
+        component={BlankScreen}
         options={({ navigation }) => ({
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="person" color={color} size={size} />
